@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Puzzel 4</title>
+    </head>
+    <body>
+        <h1>Puzzel 4</h1>
+        <script>
+            var aankoop = prompt("Wat is je aankoopbedrag?");
+            var aankoopint = parseInt(aankoop);
+            if(aankoop<25){
+                var bedrag = aankoopint + 3.95;
+                alert("Het totaalbedrag inclusief bezorgkosten is "+bedrag+".");
+            }
+            if(aankoop>25){
+                alert("Het totaalbedrag is &euro;"+aankoopint+". Bezorging is gratis!");
+            }
+            </script>
+    </body>
+</html>
