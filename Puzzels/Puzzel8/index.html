@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Puzzel 8</title>
+    </head>
+    <body>
+        <script>
+            function vergelijkWoorden() {
+                var w1 = document.getElementById("w1").value;
+                var w2 = document.getElementById("w2").value;
+                if(w1.length > w2.length){
+                    document.getElementById("result").innerHTML = "Woord 1 bestaat uit "+w1.length+" tekens en is dus langer";
+                }
+                if(w1.length < w2.length){
+                    document.getElementById("result").innerHTML = "Woord 2 bestaat uit "+w2.length+" tekens en is dus langer";
+                }
+                if(w1.length == w2.length){
+                    document.getElementById("result").innerHTML = "De woorden zijn even lang, ze bestaan beide uit "+w2.length+" tekens";
+                }
+            }
+        </script>
+            <h1>Puzzel 8</h1>
+        <p>Welk woord is langer? Voer twee woorden in en druk op vergelijken!</p>
+        <form>
+            <p><input type="text" name="w1" id="w1" value=""></p>
+            <p><input type="text" name="w2" id="w2" value=""></p>
+            <p><input type="button" value="Vergelijken" onclick="vergelijkWoorden()"></p>            
+            <p id="result"></p>
+        </form>
+    </body>
+</html>
