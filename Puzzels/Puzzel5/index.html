@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Puzzel 5</title>
+    </head>
+    <body>
+        <script>
+            function vergelijkWoorden() {
+                var w1 = prompt("Vul hier woord 1 in!");
+                var w2 = prompt("Vul hier woord 2 in!");
+                if(w1.length > w2.length){
+                    alert("Woord 1 bestaat uit "+w1.length+" tekens en is dus langer");
+                }
+                if(w1.length < w2.length){
+                    alert("Woord 2 bestaat uit "+w2.length+" tekens en is dus langer");
+                }
+                if(w1.length == w2.length){
+                    alert("De woorden zijn even lang, ze bestaan beide uit "+w2.length+" tekens");
+                }
+            }
+        </script>
+            <h1>Puzzel 5</h1>
+        <p>Welk woord is langer? Voer twee woorden in en druk op vergelijken!</p>
+        <button onclick="vergelijkWoorden()">Vergelijken</button>
+
+    </body>
+</html>
