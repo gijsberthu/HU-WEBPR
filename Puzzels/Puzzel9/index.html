@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Puzzel 8</title>
+    </head>
+    <body>
+        <script>
+            function berekenValuta() {
+                var bedrag = document.getElementById("bedrag").value;
+                var bedragint = parseInt(bedrag);
+                var dollar = (bedragint * 1.08);
+                var peso = (bedragint * 18.06);
+                var yen = (bedragint * 132.04);
+                var pond = (bedragint * 0.71);
+                document.getElementById("result").innerHTML = "De waarde in dollar is "+dollar+" dolor<br/>De waarde in peso is "+peso+" peso<br/>De waarde in yen is "+yen+" yen<br/>De waarde in pond is "+pond+" pond<br/>";
+            }
+        </script>
+            <h1>Puzzel 8</h1>
+        <p>Welk woord is langer? Voer twee woorden in en druk op vergelijken!</p>
+        <form>
+            <p>Je bedrag<input type="text" name="bedrag" id="bedrag" value=""></p>
+            <p><input type="button" value="Vergelijken" onclick="berekenValuta()"></p>            
+            <p id="result"></p>
+        </form>
+    </body>
+</html>
