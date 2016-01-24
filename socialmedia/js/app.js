@@ -3,29 +3,26 @@
 //
 
 $(document).ready(function(){
-        $(".addMessage").click(function() {
+    $(".addMessage").click(function() {
         var input = $("#inputBericht").val();
-        if(input.length !== 0) {
-            var bericht = "<div class='bericht'><img class='profilepic' src='http://www.judithvandaalen.nl/wp-content/uploads/galleries/post-444/Profielfoto-Portretfotografie-Fotostudio-5.jpg'<div class='omschrijving'><p>GIJSBERT</p>"+input+"</div><div class='waardering'><div class='likes'>0</div><div class=''><button class='removeBericht'>Verwijder bericht</a><button class='addLike'>LIKE!</button></div></div><div class='addComments'><input type='text' class='inputComment' placeholder='Reageer op dit bericht ..'/><button class='addComment'>Reageer op dit bericht</button></div><div class='comments'></div>";
-            $("#berichten").append(bericht);
-        } else {
-        $("#error").text('Het veld is niet ingevuld.');
-        }
+            if(input.length !== 0) {
+                var bericht = "<div class='bericht'><img class='profilepic' src='http://www.judithvandaalen.nl/wp-content/uploads/galleries/post-444/Profielfoto-Portretfotografie-Fotostudio-5.jpg'<div class='omschrijving'><p>GIJSBERT</p>"+input+"</div><div class='waardering'><div class='likes'>0</div><div class=''><button class='removeBericht'>Verwijder bericht</a><button class='addLike'>LIKE!</button></div></div><div class='addComments'><input type='text' class='inputComment' placeholder='Reageer op dit bericht ..'/><button class='addComment'>Reageer op dit bericht</button></div><div class='comments'></div>";
+                $("#berichten").append(bericht);
+            } else {
+                $("#error").text('Het veld is niet ingevuld.');
+            }
     });
     $("body").on("click", ".addLike", function(){
         var likes = $(this).parent().siblings(".likes").text();
-        likes++;
-        $(this).parent().siblings(".likes").text(likes);
+            likes++;
+            $(this).parent().siblings(".likes").text(likes);
     });
     $("body").on("click", ".addComment", function(){
         var input = $(this).siblings(".inputComment").val();
-
         var inputCommentIsEmpty = $.trim($(this).siblings(".inputComment").val());
-
         if(inputCommentIsEmpty.length !== 0) {
             var comment = "<div class='comment'><div class='message'>"+input+"</div><div class='commentControl'></div></div>";
             $(this).parent().siblings(".comments").append(comment);
-
             $(this).siblings(".inputComment").val('');
             $("#error").text('');
         } else {
@@ -50,21 +47,15 @@ function nieuwAccount(){
     var ww = myForm.elements["ww"].value;
     var hww = myForm.elements["hww"].value;
     var gbArray = ["Gijsbert", "Hekman", "Koning", "ErikHekman", "ThijsWaardenburg", "Ronald", "RonaldVanEssen"];
-
-
-
+    
     for(var i = 0; i < gbArray.length; i++){
-
         if (gb == gbArray[i]) {
             gb = "correct"
         };
-
         if (gb == "correct") {
             document.getElementById('antwoord').innerHTML = "De gebruikersnaam is al in gebruik, kies een nieuwe gebruikersnaam."
         }
     }
-
-        //lege velden error
         if (vn == "") {
             document.getElementById('antwoord').innerHTML = "U heeft uw  voornaam niet ingevuld"
         }
@@ -80,27 +71,19 @@ function nieuwAccount(){
         if (hww == "") {
             document.getElementById('antwoord').innerHTML = "U heeft uw  wachtwoord niet herhaald"
         }
-
-
-
-        //wachtwoord vergelijken
         if (ww === hww) {}  
             else{
                 document.getElementById('antwoord').innerHTML = "Uw wachtwoord komt niet overeen"
             }
             if (vn == "Gino" && an == "Hoven" && gb == "correct" && ww == "test" && hww == "test" ) {
-                location.href="timeline.html";
+                location.href="home.html";
             }
-
-        
 }
 $(document).ready(function(){
-    
         //upload image
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-
                 reader.onload = function (e) {
                     $('#profib').attr('src', e.target.result);
                 }
@@ -108,18 +91,13 @@ $(document).ready(function(){
                 reader.readAsDataURL(input.files[0]);
             }
         }
-
         $("#imgInp").change(function(){
             readURL(this);
         });
 });
 
 //
-
-
 // Inloggen
-
-
 //
 
 var i =0;
@@ -133,10 +111,9 @@ function inloggen() {
 
 	for(var j=0; j<gnArray.length; j++){
 		if(gb == gnArray[j] && ww == "qwerty"){
-		location.href="timeline.html";
+		location.href="home.html";
 		}	
-	}
-			
+	}	
 	if(gb == ""){
 		document.getElementById("bericht").innerHTML = "U heeft uw gebruikersnaam niet ingevuld."
 		}
@@ -148,7 +125,6 @@ function inloggen() {
 		$("div").effect("shake");
 		i++;
 	}
-		
 	if(i>2){
 		document.getElementById("bericht").innerHTML = "U heeft 3x een verkeerd gebruikersnaam en/of wachtwoord ingevuld, u moet 3 minuten wachten."
 		$("button").hide();
@@ -158,11 +134,7 @@ function inloggen() {
 
 
 //
-
-
 // Berichten
-
-
 //
 $(document).ready(function(){
     // add chatbericht
@@ -193,41 +165,32 @@ $(document).ready(function(){
         $(".friend4").show();
         $(".friend1").hide();
     });
-
     $(".vriend2").click(function(){
         $(".friend5").show();
         $(".friend2").hide();
     });
-
     $(".friend3").click(function(){
         $(".friend6").show();
         $(".friend3").hide();
     });
-
     $(".friend4").click(function(){
         $(".friend4").hide();
     });
-
     $(".friend5").click(function(){
         $(".friend5").hide();
     });
-
     $(".friend6").click(function(){
         $(".friend6").hide();
     });
-
     $(".friend7").click(function(){
         $(".friend7").hide();
     });
-
     $(".friend8").click(function(){
         $(".friend8").hide();
     });
-
     $(".friend9").click(function(){
         $(".friend9").hide();
     });
-
     $(".friend10").click(function(){
         $(".friend10").hide();
     });
