@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Puzzel 13</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+						
+				$('#button').click(function(){
+					var weekeen  = myform.elements["een"].value;
+					var weektwee = myform.elements["twee"].value;
+					var weekdrie = myform.elements["drie"].value;
+					var weekvier = myform.elements["vier"].value;
+					var weekvijf = myform.elements["vijf"].value;
+					var eindopdracht = myform.elements["eind"].value;
+
+					var i;
+					var cijfer = new Array();
+						cijfer[0] = weekeen,  20;
+						cijfer[1] = weektwee, 20;
+						cijfer[2] = weekdrie, 20;
+						cijfer[3] = weekvier, 20;
+						cijfer[4] = weekvijf, 20;
+						cijfer[5] = eindopdracht, 50;
+					var sum = 0;
+						for( var i = 0; i < cijfer.length; i++ ){
+							sum += parseInt( cijfer[i], 10 ); 
+							}
+						var avg = sum/cijfer.length;
+							$('#uitslag').text("Het totaal van de cijfers is: " + sum + " Het gemiddelde cijfer is: " + avg );
+						});
+					});
+		</script>
+	</head>
+	<body>
+		<button id="button">De gemiddelde uitslag is:</button>
+
+
+		<form id="myform" action="">
+			Cijfer week 1: <input type="text" name="een" value"" />
+			<br>
+			Cijfer week 2: <input type="text" name="twee" value"" />
+			<br>
+			Cijfer week 3: <input type="text" name="drie" value"" />
+			<br>
+			Cijfer week 4: <input type="text" name="vier" value"" />
+			<br>
+			Cijfer week 5: <input type="text" name="vijf" value"" />
+			<br>
+			Cijfer eindopdracht: <input type="text" name="eind" value"" />
+		</form>
+
+		<p id="uitslag"></p>
+
+	</body>
+</html>

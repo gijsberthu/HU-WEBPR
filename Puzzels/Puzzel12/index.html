@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Puzzel 12</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+			
+				$('#loterij').click(function(){
+					var nummer = parseInt($('#nummer').val());
+				
+					var winnendeLotnummers = [ 123456, 789456, 987654 ],
+					found = $.inArray(nummer, winnendeLotnummers);
+					if (found === -1) {
+						$('#bericht').text('U heeft helaas niet gewonnen met het lotnummer: '+nummer);
+					} else {
+						$('#bericht').text('Gefeliciteerd! U heeft de hoofdprijs gewonnen met het lotnummer: '+nummer);
+					}
+				});
+			});
+		
+		</script>
+
+	</head>
+	
+	<body>
+
+		<h1>Controleer je lotnummer</h1>
+		Voer uw lotnummer in: <input type="text" id="nummer" placeholder="voer in">
+
+		<br>
+		
+		<button id="loterij">Check je lotnummer:</button>
+
+		<p id="bericht"></p>
+
+	</body>
+</html>

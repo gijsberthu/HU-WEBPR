@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Puzzel 11</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+			
+			$('#cijfer').keyup(function(){
+				var cijfer 	= parseInt($('#cijfer').val());
+				var nummer1 	= 'uno';
+				var nummer2 	= 'dos';
+				var nummer3 	= 'tres';
+				var nummer4 	= 'cuatro';
+				var nummer5 	= 'cinco';
+				var nummer6 	= 'seis';
+				var nummer7 	= 'siete';
+				var nummer8 	= 'ocho';
+				var nummer9 	= 'nueve';
+				var nummer10 	= 'diez';
+
+				$('#invoer').text('');
+
+				if (cijfer === 1) {
+					$('#invoer').text('Het spaanse woord voor '+cijfer+' is '+nummer1);
+				} else if (cijfer === 2) {
+					$('#invoer').text('Het spaanse woord voor '+cijfer+' is '+nummer2);
+				} else if (cijfer === 3) {
+					$('#invoer').text('Het spaanse woord voor '+cijfer+' is '+nummer3);
+				} else if (cijfer === 4) {
+					$('#invoer').text('Het spaanse woord voor '+cijfer+' is '+nummerr4);
+				} else if (cijfer === 5) {
+					$('#invoer').text('Het spaanse woord voor '+cijfer+' is '+nummer5);
+				} else if (cijfer === 6) {
+					$('#invoer').text('Het spaanse woord voor '+cijfer+' is '+nummer6);
+				} else if (cijfer === 7) {
+					$('#invoer').text('Het spaanse woord voor '+cijfer+' is '+nummer7);
+				} else if (cijfer === 8) {
+					$('#invoer').text('Het spaanse woord voor '+cijfer+' is '+nummer8);
+				} else if (cijfer === 9) {
+					$('#invoer').text('Het spaanse woord voor '+cijfer+' is '+nummer9);
+				} else if (cijfer === 10) {
+					$('#invoer').text('Het spaanse woord voor '+cijfer+' is '+nummer10);
+				} else {
+					$('#invoer').text('Uw spaanse woord is helaas niet beschikbaar... Probeer een cijfer tussen de 1 en 10');
+				}
+
+			});
+		});
+		
+		</script>
+
+	</head>
+	
+	<body>
+
+		<h1>Ik kan spaans spreken</h1>
+			Voer uw cijfer in: <input type="text" id="cijfer"><p id="invoer"></p>
+	</body>
+</html>
