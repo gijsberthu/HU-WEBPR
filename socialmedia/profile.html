@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Registratie</title>
+		<meta name="robots" content="noindex, nofollow">
+
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+		<script src="js/app.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+	</head>
+	
+	<body>
+		<header>
+			<div class="menu-bar">
+                <a href="profile.html">Home</a>
+                <a href="index.html">Inloggen</a>
+			</div>
+		</header>
+
+	<div id="account">
+		<form id ="myForm" action=""> 
+			<br>
+			<input type='file' id="imgInp" />
+			<img id="profib" src="#" alt="your image" height="100px" />
+		</br>
+			<input type="tekst" name="vn" placeholder="Voornaam"> 
+		</br>
+			<input type="tekst" name="an" placeholder="Achternaam"> 
+		</br>
+			<input type="tekst" name="UserName" placeholder="Gebruikersnaam"> 
+		</br>
+			<input type="tekst" name="mail" placeholder="mail"> 
+		</br>
+			<input type="password" name="ww" placeholder="Wachtwoord"> 
+		</br>
+			<input type="password" name="hww" placeholder="Herhaal wachtwoord"> 
+		</br>
+		</form>
+
+		<br> 
+		<button onclick="nieuwAccount()">Maak nieuw account</button> 
+	</br> 
+	<br> 
+	<p id="antwoord"></p>
+	</div>
+	</body>
+</html>
+

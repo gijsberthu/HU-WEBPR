@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Berichten</title>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script src="js/app.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/lightbox.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+	</head>
+	
+	<body>
+        <header>
+            <div class="menu-bar">
+                <a href="home.html">Home</a>
+                <a href="friends.html">Vrienden</a>
+                <a href="message.html">Berichten</a>
+                <a href="profile.html">Mijn profiel</a>
+            </div>
+        </header>
+        <div id="container">
+            <div id="content">
+			<div id="info">
+					<h1>Thijs</h1>
+					<p>Beschikbaar</p>
+			</div>
+
+			<div id="berichtenvenster">
+				<div class="chatbericht">
+					<p>Thijs: <br> Deze site kan je goed helpen :) <a href="http://mostlywebsites.net/wp-content/uploads/w3schools-logo.jpg" data-lightbox="serie" data-title="Logo"><img src="http://mostlywebsites.net/wp-content/uploads/w3schools-logo.jpg" alt="Logo"width="100px"></a></p>
+				</div>
+				<div class="chatbericht">
+					<p>Gijsbert: <br>Ah, super!.</p>
+				</div>
+                </div>
+
+			<div id="chatberichten">
+				<div class="addChatBerichten">
+					<input type="text" id="inputChatBericht" placeholder="Typ een bericht"/>
+					<button class="addChatBericht">Plaats bericht</button>
+					<div id="error"></div>
+
+				</div>
+			</div>
+		
+		</div>
+		<script src="js/lightbox.js"></script>
+	</body>
+</html>

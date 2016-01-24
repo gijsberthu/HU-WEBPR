@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Timeline</title>
+
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+        <script src="js/app.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="css/lightbox.css">
+    </head>
+    <body>
+        <header>
+            <div class="menu-bar">
+                <a href="home.html">Home</a>
+                <a href="friends.html">Vrienden</a>
+                <a href="message.html">Berichten</a>
+                <a href="profile.html">Mijn profiel</a>
+            </div>
+        </header>
+        <div id="container">
+            <div id="timeline">
+                <div class="Messages">
+                    <div id="textbox">
+                        <textarea rows="4" cols="75" id="inputBericht" placeholder="Wat ben je aan het doen?"></textarea>
+                        <button class="addMessage">Plaatsen</button>
+                        <div id="error"></div>
+                    </div>
+                </div>
+                <div id="berichten">
+                    <div class='bericht'><a href="http://www.judithvandaalen.nl/wp-content/uploads/galleries/post-444/Profielfoto-Portretfotografie-Fotostudio-5.jpg" data-lightbox="serie" data-title="Profielfoto"><img class="profilepic" src="http://www.judithvandaalen.nl/wp-content/uploads/galleries/post-444/Profielfoto-Portretfotografie-Fotostudio-5.jpg" alt="Profielfoto"width="100px"></a><div class='omschrijving'><p> GIJSBERT </p>Hoi</div><div class='waardering'><div class='likes'>0</div><div class=''><button class='removeBericht'>Verwijder bericht</a><button class='addLike'>LIKE!</button></div></div><div class='addComments'><input type='text' class='inputComment' placeholder='Reageer op dit bericht ..'/><button class='addComment'>Reageer op dit bericht</button></div><div class='comments'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<script src="js/lightbox.js"></script>
+	</body>
+</html>
