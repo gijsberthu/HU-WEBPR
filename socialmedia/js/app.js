@@ -75,7 +75,7 @@ function nieuwAccount(){
             else{
                 document.getElementById('antwoord').innerHTML = "Uw wachtwoord komt niet overeen"
             }
-            if (vn == "Gino" && an == "Hoven" && gb == "correct" && ww == "test" && hww == "test" ) {
+            if (vn == "Gijsbert" && an == "Legemaat" && gb == "test" && ww == "test" && hww == "test" ) {
                 location.href="home.html";
             }
 }
